@@ -31,8 +31,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Logo size="md" />
             <p className="mt-5 text-sm text-foreground/60 leading-relaxed">
-              Pizza & Fast Food Halal nel cuore di Bra (CN). Sapori autentici,
-              , passione artigianale.
+              Pizza & Fast Food Halal nel cuore di Bra (CN).
             </p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary/15 border border-primary/40 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary">
               Halal Certified
