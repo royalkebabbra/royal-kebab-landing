@@ -8,7 +8,7 @@ const features = [
   {
     image: "/images/pizza-al-taglio.png",
     title: "Pizza al taglio",
-    subtitle: "Fetta dopo fetta, impasto soffice, base croccante e gusti preparati ogni giorno.",
+    subtitle: "Impasto soffice, base croccante e gusti preparati ogni giorno.",
   },
   {
     image: "/images/kebab-in-piadina.png",
@@ -18,7 +18,7 @@ const features = [
   {
     image: "/images/french-tacos.png",
     title: "French Tacos",
-    subtitle: "Tortilla calda, ripieno abbondante, carne, patatine e salse dentro a ogni morso.",
+    subtitle: "Ripieno abbondante, carne, patatine e salse dentro a ogni morso.",
   },
   {
     image: "/images/sfiziosita.png",
