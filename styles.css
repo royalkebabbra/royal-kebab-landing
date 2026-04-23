@@ -426,20 +426,27 @@ body.no-scroll { overflow: hidden; }
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1.25rem;
+  padding: clamp(0.75rem, 2.5vw, 1.25rem);
   z-index: 1;
 }
 .feature-content h3 {
-  font-size: 1.125rem;
+  font-size: clamp(0.95rem, 2.6vw, 1.125rem);
   font-weight: 900;
   color: var(--fg);
+  line-height: 1.15;
+  word-break: break-word;
+  hyphens: auto;
 }
 .feature-content p {
-  font-size: 0.75rem;
+  font-size: clamp(0.65rem, 1.7vw, 0.75rem);
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--fg-60);
-  margin-top: 0.25rem;
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+@media (max-width: 380px) {
+  .feature-content p { letter-spacing: 0.04em; }
 }
 
 .badges-grid {
