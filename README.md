@@ -3,7 +3,7 @@
 Sito vetrina one-page per Royal Kebab Center, Bra (CN).
 
 ## 🌐 Dominio
-Production: https://www.royalkebabbra.it
+Production: https://conconet.github.io/royal-kebab-landing/
 
 ## 📁 Struttura
 - `index.html` — pagina principale
@@ -13,7 +13,6 @@ Production: https://www.royalkebabbra.it
 - `sitemap.xml` — sitemap per crawler
 - `robots.txt` — direttive crawler
 - `manifest.json` — Web App Manifest (PWA base)
-- `CNAME` — dominio personalizzato GitHub Pages
 - `.nojekyll` — disabilita Jekyll
 - `.gitignore` — esclusioni Git
 - `fonts/` — font self-hosted (no CDN esterni per privacy)
@@ -21,7 +20,7 @@ Production: https://www.royalkebabbra.it
 - `screenRecensioni/` — screenshot recensioni Google (esclusi da indicizzazione, materiale interno/legale)
 
 ## 🚀 Deploy
-Hostato su GitHub Pages tramite branch `main`.
+Hostato su GitHub Pages tramite branch `main` come project site.
 Push automatico su `main` → deploy live.
 
 ## 🔒 Privacy & GDPR
@@ -32,10 +31,10 @@ Push automatico su `main` → deploy live.
 - Privacy Policy e Cookie Policy gestite tramite Iubenda (link diretto, no script)
 
 ## 🔧 TODO post-deploy
-1. Configurare DNS del dominio royalkebabbra.it verso GitHub Pages
+1. Configurare DNS del dominio royalkebabbra.it verso GitHub Pages quando si passerà al dominio personalizzato
 2. Verificare proprietà su Google Search Console e inserire meta tag
 3. Verificare proprietà su Bing Webmaster Tools e inserire meta tag
-4. Inviare sitemap.xml a Search Console e Bing
+4. Inviare sitemap.xml a Search Console e Bing usando l'URL attuale `https://conconet.github.io/royal-kebab-landing/sitemap.xml`
 5. Generare icone PNG dedicate 192x192 e 512x512 per il manifest
 6. Aggiornare `theme_color` in `manifest.json` leggendo il valore reale da `--primary` o equivalente in `styles.css`
 7. Aggiungere link Privacy Policy e Cookie Policy Iubenda nel footer
