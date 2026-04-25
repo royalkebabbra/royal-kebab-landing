@@ -13,9 +13,9 @@ const CATEGORIES = [
   { id: "bibite", label: "Bibite & Extra" },
 ];
 
-const TACOS_MENU_DESC = "+ bibita + patatine fritte";
-const KEBAB_MENU_DESC = "+ bibita + patatine fritte";
-const PIATTO_MENU_DESC = "+ lattina";
+const TACOS_MENU_DESC = "piatto + bibita + patatine fritte";
+const KEBAB_MENU_DESC = "piatto + bibita + patatine fritte";
+const PIATTO_MENU_DESC = "piatto + lattina";
 
 const tacosSizes = (L, Lm, XL, XLm, XXL, XXLm) => [
   { label: "L",   price: L,   menuPrice: Lm },
@@ -54,9 +54,9 @@ const MENU_ITEMS = [
   { id: "kebab-porzione-maxi",           name: "Porzione Kebab Maxi",            price: 11,  category: "kebab", subGroup: "Porzioni" },
 
   // COSAMIA
-  { id: "cosamia-pollo", name: "Cosamia Pollo", price: 7,  menuPrice: 8.5,  menuDescription: "+ bibita", category: "cosamia" },
-  { id: "cosamia-kofta", name: "Cosamia Kofta", price: 8,  menuPrice: 9.5,  menuDescription: "+ bibita", category: "cosamia" },
-  { id: "cosamia-mixed", name: "Cosamia Mixed", price: 10, menuPrice: 11.5, menuDescription: "+ bibita", category: "cosamia", highlight: true },
+  { id: "cosamia-pollo", name: "Cosamia Pollo", price: 7,  menuPrice: 8.5,  menuDescription: "piatto + bibita", category: "cosamia" },
+  { id: "cosamia-kofta", name: "Cosamia Kofta", price: 8,  menuPrice: 9.5,  menuDescription: "piatto + bibita", category: "cosamia" },
+  { id: "cosamia-mixed", name: "Cosamia Mixed", price: 10, menuPrice: 11.5, menuDescription: "piatto + bibita", category: "cosamia", highlight: true },
 
   // BURGER
   { id: "burger-hamburger",     name: "Hamburger",          price: 5.5, menuPrice: 9.5,  menuDescription: KEBAB_MENU_DESC, category: "burger" },
@@ -88,8 +88,8 @@ const MENU_ITEMS = [
   { id: "fam-margherita",       name: "Margherita",    description: "Formato familiare", price: 17, category: "familiari", subGroup: "Pizze Familiari" },
   { id: "fam-farcita",          name: "Farcita",       description: "Formato familiare", price: 21, category: "familiari", subGroup: "Pizze Familiari" },
   { id: "fam-royal-kebab",      name: "Royal Kebab",   description: "Formato familiare", price: 25, category: "familiari", subGroup: "Pizze Familiari", highlight: true },
-  { id: "taglio-margherita",    name: "Margherita",    price: 2.5, menuPrice: 3.5, menuDescription: "+ bibita", category: "familiari", subGroup: "Pizze al Taglio" },
-  { id: "taglio-farcita-kebab", name: "Farcita Kebab", price: 4,   menuPrice: 5,   menuDescription: "+ bibita", category: "familiari", subGroup: "Pizze al Taglio" },
+  { id: "taglio-margherita",    name: "Margherita",    price: 2.5, menuPrice: 3.5, menuDescription: "piatto + bibita", category: "familiari", subGroup: "Pizze al Taglio" },
+  { id: "taglio-farcita-kebab", name: "Farcita Kebab", price: 4,   menuPrice: 5,   menuDescription: "piatti + bibita", category: "familiari", subGroup: "Pizze al Taglio" },
 
   // FRITTI
   { id: "fritti-cheddar",      name: "Cheddar Cheese", price: 5,   category: "fritti" },
@@ -126,12 +126,12 @@ const formatPrice = (price) => `€ ${price.toFixed(2).replace(".", ",")}`;
 const hm = (h, m) => h * 60 + m;
 const WEEK_HOURS = [
   { day: "Lunedì", weekday: 1, closed: true, intervals: [], display: "Chiuso" },
-  { day: "Martedì", weekday: 2, closed: true, intervals: [], display: "Chiuso" },
+  { day: "Martedì", weekday: 2, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
   { day: "Mercoledì", weekday: 3, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
   { day: "Giovedì", weekday: 4, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
   { day: "Venerdì", weekday: 5, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 30)]], display: "12:00–15:00 / 18:00–23:30" },
-  { day: "Sabato", weekday: 6, closed: false, intervals: [[hm(18, 0), hm(23, 30)]], display: "18:00–23:30" },
-  { day: "Domenica", weekday: 0, closed: false, intervals: [[hm(18, 0), hm(23, 0)]], display: "18:00–23:00" },
+  { day: "Sabato", weekday: 6, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 30)]], display: "12:00–15:00 / 18:00–23:30" },
+  { day: "Domenica", weekday: 0, closed: false, intervals: [[hm(18, 0), hm(23, 30)]], display: "18:00–23:30" },
 ];
 
 const isOpenNow = (now) => {
@@ -227,7 +227,7 @@ function renderMenuItem(item) {
         <span class="size-menu">Menù ${formatPrice(s.menuPrice)}</span>
       </div>
     `).join('');
-    const menuDesc = item.menuDescription ? `<p class="menu-price-menu-desc">Menù ${item.menuDescription}</p>` : '';
+    const menuDesc = item.menuDescription ? `<p class="menu-price-menu-desc">Menù: ${item.menuDescription}</p>` : '';
     return `
       <article class="menu-item">
         ${topBadge}
@@ -251,7 +251,7 @@ function renderMenuItem(item) {
           ${item.menuPrice !== undefined ? `
             <span class="menu-price-menu">
               Menù: ${formatPrice(item.menuPrice)}
-              ${item.menuDescription ? `<span class="menu-price-menu-desc">${item.menuDescription}</span>` : ''}
+              ${item.menuDescription ? `<span class="menu-price-menu-desc">Menù: ${item.menuDescription}</span>` : ''}
             </span>
           ` : ''}
         </div>
@@ -395,6 +395,16 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHours();
   renderReviews();
   initReveal();
+
+  document.querySelectorAll('.feature-card[data-menu-cat]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      const cat = el.dataset.menuCat;
+      if (!cat) return;
+      e.preventDefault();
+      renderMenu(cat);
+      document.getElementById('menu').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 
   // Refresh open-now status every minute
   setInterval(renderHours, 60_000);

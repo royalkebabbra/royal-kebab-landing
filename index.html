@@ -65,12 +65,11 @@
       "longitude":7.8495285
     },
     "openingHoursSpecification":[
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"12:00","closes":"15:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"18:00","closes":"23:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"12:00","closes":"15:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"18:00","closes":"23:30"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"18:00","closes":"23:30"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"18:00","closes":"23:00"}
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"18:00","closes":"23:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"18:00","closes":"23:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"18:00","closes":"23:30"}
     ],
     "acceptsReservations":false,
     "hasMenu":"https://deliveroo.it/it/menu/bra/bra/royal-kebab-center",
@@ -182,34 +181,34 @@
         </div>
 
         <div class="features-grid">
-          <article class="feature-card reveal">
+          <a href="#menu" class="feature-card reveal" data-menu-cat="pizze">
             <div class="feature-img"><img src="images/pizza-al-taglio.png" alt="Pizza al taglio" /></div>
             <div class="feature-content">
               <h3>Pizza al taglio</h3>
               <p>Impasto soffice, base croccante e gusti preparati ogni giorno.</p>
             </div>
-          </article>
-          <article class="feature-card reveal">
+          </a>
+          <a href="#menu" class="feature-card reveal" data-menu-cat="kebab">
             <div class="feature-img"><img src="images/kebab-in-piadina.png" alt="Kebab in piadina" /></div>
             <div class="feature-content">
               <h3>Kebab in piadina</h3>
               <p>Piadina calda, ripieno abbondante e tutto il gusto del kebab.</p>
             </div>
-          </article>
-          <article class="feature-card reveal">
+          </a>
+          <a href="#menu" class="feature-card reveal" data-menu-cat="tacos">
             <div class="feature-img"><img src="images/french-tacos.png" alt="French Tacos" /></div>
             <div class="feature-content">
               <h3>French Tacos</h3>
               <p>Ripieno abbondante, carne, patatine e salse dentro a ogni morso.</p>
             </div>
-          </article>
-          <article class="feature-card reveal">
+          </a>
+          <a href="#menu" class="feature-card reveal" data-menu-cat="fritti">
             <div class="feature-img"><img src="images/sfiziosita.png" alt="Sfiziosità" /></div>
             <div class="feature-content">
               <h3>Sfiziosità</h3>
               <p>Tutto quello che ci vuole per completare il tuo ordine.</p>
             </div>
-          </article>
+          </a>
         </div>
 
         <div class="badges-grid">
@@ -377,11 +376,10 @@
             Orari
           </h4>
           <ul class="hours-brief">
-            <li><span>Mer–Gio</span><span>12:00–15:00 / 18:00–23:00</span></li>
-            <li><span>Venerdì</span><span>12:00–15:00 / 18:00–23:30</span></li>
-            <li><span>Sabato</span><span>18:00–23:30</span></li>
-            <li><span>Domenica</span><span>18:00–23:00</span></li>
-            <li><span>Lun–Mar</span><span>Chiuso</span></li>
+            <li><span>Mar–Gio</span><span>12:00–15:00 / 18:00–23:00</span></li>
+            <li><span>Ven–Sab</span><span>12:00–15:00 / 18:00–23:30</span></li>
+            <li><span>Domenica</span><span>18:00–23:30</span></li>
+            <li><span>Lunedì</span><span>Chiuso</span></li>
           </ul>
         </div>
       </div>
@@ -406,6 +404,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
