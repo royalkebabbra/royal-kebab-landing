@@ -143,17 +143,17 @@ const isOpenNow = (now) => {
 };
 
 const REVIEWS = [
-  { name: "Marco R.", rating: 5, date: "2 settimane fa", text: "Kebab davvero ottimo, carne morbida e salse fatte in casa. Consegna puntuale e porzione generosa. Lo consiglio vivamente!" },
-  { name: "Sofia L.", rating: 5, date: "1 mese fa", text: "Il Royal Kebab è la loro specialità e si capisce perché. Ingredienti freschi, sapore autentico. Tornerò sicuramente." },
-  { name: "Alessandro B.", rating: 4, date: "1 mese fa", text: "Pizza kebab fantastica, finalmente un fast food halal di qualità a Bra. Personale gentile e prezzi onesti." },
+  { name: "Vladyslava M.", rating: 5, text: "1000/10!! Molto Buono e presentazione molto bella, il kebab meno costoso a Bra, ecco qua!" },
+  { name: "Andrea V.", rating: 5, text: "Ottimo kebab e pizza,ho preso il menù panino patatine bibita a prezzo convenientissimo! Se in zona tornerò certamente ! Complimenti!" },
+  { name: "Rachid C.", rating: 5, text: "Un kebab Buonissimo cosi mai mangiato , economico , locale molto pulito." },
 ];
 
 const RATING_BREAKDOWN = [
-  { stars: 5, percent: 70 },
-  { stars: 4, percent: 18 },
-  { stars: 3, percent: 7 },
-  { stars: 2, percent: 3 },
-  { stars: 1, percent: 2 },
+  { stars: 5, percent: 79 },
+  { stars: 4, percent: 7 },
+  { stars: 3, percent: 3 },
+  { stars: 2, percent: 0 },
+  { stars: 1, percent: 10 },
 ];
 
 /* ============ ICONS (SVG strings) ============ */
@@ -351,9 +351,7 @@ function renderReviews() {
   breakdownEl.innerHTML = RATING_BREAKDOWN.map((b) => `
     <div class="breakdown-row">
       <span class="num">${b.stars}</span>
-      ${starSvg(true, 14)}
       <div class="bar"><div class="bar-fill" data-width="${b.percent}"></div></div>
-      <span class="percent">${b.percent}%</span>
     </div>
   `).join('');
 
@@ -366,7 +364,6 @@ function renderReviews() {
       <p class="review-text">${r.text}</p>
       <div class="review-meta">
         <p class="review-name">${r.name}</p>
-        <p class="review-date">${r.date}</p>
       </div>
     </article>
   `).join('');
