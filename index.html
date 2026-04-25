@@ -1,31 +1,71 @@
 <!DOCTYPE html>
+<!--
+  Royal Kebab Center - Sito ufficiale
+  Icons: Lucide (https://lucide.dev) — MIT License
+  © 2026 Royal Kebab Center di El Kassab Ahmed
+-->
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal Kebab Center | Kebab e Pizza a Bra, Cuneo</title>
-  <meta name="description" content="Royal Kebab Center a Bra (CN): kebab halal, pizza, pollo e piadine. Fast food di qualità con consegna a domicilio. 4.4★ su Deliveroo. Ordina online." />
-  <meta name="keywords" content="kebab Bra, kebab Cuneo, pizza Bra, fast food halal, Royal Kebab Center, consegna a domicilio Bra, kebab halal Piemonte, Deliveroo Bra" />
+  <title>Royal Kebab Center | Kebab & Pizza a Bra, Cuneo</title>
+  <meta name="description" content="Royal Kebab Center a Bra (CN): kebab halal, pizza, panini e piadine. Fast food di qualità, ordina su Deliveroo o vieni a trovarci in Piazza Roma." />
   <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://conconet.github.io/royal-kebab-landing/" />
+  <meta name="theme-color" content="#d41111" />
   <meta property="og:title" content="Royal Kebab Center | Kebab & Pizza a Bra, Cuneo" />
   <meta property="og:description" content="Sapori autentici del Medio Oriente nel cuore del Piemonte. Kebab halal, pizza e fast food di qualità a Bra (CN)." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="it_IT" />
-  <meta property="og:image" content="images/hero-kebab.png" />
+  <meta property="og:url" content="https://conconet.github.io/royal-kebab-landing/" />
+  <meta property="og:site_name" content="Royal Kebab Center" />
+  <meta property="og:image" content="https://conconet.github.io/royal-kebab-landing/images/hero-kebab.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="images/logo.png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
+  <link rel="preload" as="image" href="images/hero-kebab.png" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css?v=3" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Restaurant",
+    "@id":"https://conconet.github.io/royal-kebab-landing/#restaurant",
     "name":"Royal Kebab Center Pizza & Fast Food",
-    "image":"images/hero-kebab.png",
+    "image":"https://conconet.github.io/royal-kebab-landing/images/hero-kebab.png",
+    "url":"https://conconet.github.io/royal-kebab-landing/",
+    "telephone":"+390172752529",
     "servesCuisine":["Kebab","Pizza","Halal","Mediterranean","Fast Food"],
     "priceRange":"€€",
-    "address":{"@type":"PostalAddress","streetAddress":"Piazza Roma 44","addressLocality":"Bra","addressRegion":"CN","postalCode":"12042","addressCountry":"IT"},
-    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"188","bestRating":"5","worstRating":"1"},
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Piazza Roma 44",
+      "addressLocality":"Bra",
+      "addressRegion":"CN",
+      "postalCode":"12042",
+      "addressCountry":"IT"
+    },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":44.6944684,
+      "longitude":7.8495285
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday"],"opens":"18:00","closes":"23:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"18:00","closes":"23:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"18:00","closes":"23:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"18:00","closes":"23:00"}
+    ],
+    "acceptsReservations":false,
+    "hasMenu":"https://deliveroo.it/it/menu/bra/bra/royal-kebab-center",
+    "sameAs":[
+      "https://www.google.com/maps/place/Royal+Kebab+Center/@44.6944684,7.8495285,17z/",
+      "https://deliveroo.it/it/menu/bra/bra/royal-kebab-center"
+    ],
+    "founder":{"@type":"Person","name":"El Kassab Ahmed"},
     "vatID":"IT04048840047"
   }
   </script>
@@ -90,7 +130,7 @@
         </div>
 
         <div class="hero-title-row reveal">
-          <img src="images/logo.png" alt="Royal Kebab Center logo" class="hero-logo" />
+          <img src="images/logo.png" alt="" class="hero-logo" />
           <h1 class="hero-title">
             <span class="hero-title-primary">ROYAL</span>
             <span class="hero-title-main">KEBAB</span>
@@ -344,6 +384,14 @@
           <span>PEC: <a href="mailto:elkassab.ahmed@legalmail.it">elkassab.ahmed@legalmail.it</a></span>
         </div>
         <p>© 2026 Royal Kebab Center. Tutti i diritti riservati.</p>
+        <div class="footer-legal-links">
+          <a href="https://www.iubenda.com/privacy-policy/38385219" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          <span> · </span>
+          <a href="https://www.iubenda.com/privacy-policy/38385219/cookie-policy" target="_blank" rel="noopener noreferrer">Cookie Policy</a>
+        </div>
+        <p class="footer-ai-disclaimer">
+          Alcune immagini presenti sul sito sono state generate o elaborate con strumenti di intelligenza artificiale a scopo illustrativo.
+        </p>
       </div>
     </div>
   </footer>

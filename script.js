@@ -386,10 +386,6 @@ function initReveal() {
   }, { threshold: 0.1, rootMargin: '-50px' });
 
   els.forEach((el) => io.observe(el));
-
-  // Overall rating has bars — make sure it's revealed too
-  const overall = document.querySelector('.overall-rating');
-  if (overall) io.observe(overall);
 }
 
 /* ============ INIT ============ */
