@@ -1,4 +1,3 @@
-/* ============ DATA ============ */
 const DELIVEROO_URL = "https://deliveroo.it/it/menu/bra/bra/royal-kebab-center";
 
 const CATEGORIES = [
@@ -24,7 +23,6 @@ const tacosSizes = (L, Lm, XL, XLm, XXL, XXLm) => [
 ];
 
 const MENU_ITEMS = [
-  // TACOS
   { id: "tacos-chicken",     name: "Chicken",     sizes: tacosSizes(6.5, 10.5, 8.5, 12.5, 10.5, 14.5), menuDescription: TACOS_MENU_DESC, category: "tacos" },
   { id: "tacos-kofta",       name: "Kofta",       sizes: tacosSizes(6.5, 10.5, 8.5, 12.5, 10.5, 14.5), menuDescription: TACOS_MENU_DESC, category: "tacos" },
   { id: "tacos-kebab",       name: "Kebab",       sizes: tacosSizes(6.5, 10.5, 8.5, 12.5, 10.5, 14.5), menuDescription: TACOS_MENU_DESC, category: "tacos" },
@@ -35,37 +33,31 @@ const MENU_ITEMS = [
   { id: "tacos-mixed",       name: "Mixed Tacos", sizes: tacosSizes(7.5, 11.5, 9.5, 13.5, 11.5, 15.5), menuDescription: TACOS_MENU_DESC, category: "tacos", highlight: true },
   { id: "tacos-royal",       name: "Royal Tacos", description: "La specialità della casa", price: 11, menuPrice: 15, menuDescription: TACOS_MENU_DESC, category: "tacos", highlight: true },
 
-  // KEBAB — Panini
   { id: "kebab-panino",             name: "Panino",             price: 6.5, menuPrice: 10.5, menuDescription: KEBAB_MENU_DESC, category: "kebab", subGroup: "Panini" },
   { id: "kebab-arrotolato",         name: "Arrotolato",         price: 6.5, menuPrice: 10.5, menuDescription: KEBAB_MENU_DESC, category: "kebab", subGroup: "Panini" },
   { id: "kebab-panino-falafel",     name: "Panino Falafel",     price: 6.5, menuPrice: 10.5, menuDescription: KEBAB_MENU_DESC, category: "kebab", subGroup: "Panini" },
   { id: "kebab-arrotolato-falafel", name: "Arrotolato Falafel", price: 6.5, menuPrice: 10.5, menuDescription: KEBAB_MENU_DESC, category: "kebab", subGroup: "Panini" },
   { id: "kebab-hot-dog",            name: "Panino Hot Dog",     price: 4,   menuPrice: 7,    menuDescription: KEBAB_MENU_DESC, category: "kebab", subGroup: "Panini" },
 
-  // KEBAB — Piatti
   { id: "piatto-pollo", name: "Piatto Pollo", price: 11, menuPrice: 12.5, menuDescription: PIATTO_MENU_DESC, category: "kebab", subGroup: "Piatti" },
   { id: "piatto-kebab", name: "Piatto Kebab", price: 11, menuPrice: 12.5, menuDescription: PIATTO_MENU_DESC, category: "kebab", subGroup: "Piatti", highlight: true },
   { id: "piatto-kofta", name: "Piatto Kofta", price: 12, menuPrice: 13.5, menuDescription: PIATTO_MENU_DESC, category: "kebab", subGroup: "Piatti" },
 
-  // KEBAB — Porzioni
   { id: "kebab-patatine-con-kebab",      name: "Patatine Fritte con Kebab",      price: 5,   category: "kebab", subGroup: "Porzioni" },
   { id: "kebab-patatine-con-kebab-maxi", name: "Patatine Fritte con Kebab Maxi", price: 7.5, category: "kebab", subGroup: "Porzioni" },
   { id: "kebab-porzione",                name: "Porzione Kebab",                 price: 6,   category: "kebab", subGroup: "Porzioni" },
   { id: "kebab-porzione-maxi",           name: "Porzione Kebab Maxi",            price: 11,  category: "kebab", subGroup: "Porzioni" },
 
-  // COSAMIA
   { id: "cosamia-pollo", name: "Cosamia Pollo", price: 7,  menuPrice: 8.5,  menuDescription: "piatto + bibita", category: "cosamia" },
   { id: "cosamia-kofta", name: "Cosamia Kofta", price: 8,  menuPrice: 9.5,  menuDescription: "piatto + bibita", category: "cosamia" },
   { id: "cosamia-mixed", name: "Cosamia Mixed", price: 10, menuPrice: 11.5, menuDescription: "piatto + bibita", category: "cosamia", highlight: true },
 
-  // BURGER
   { id: "burger-hamburger",     name: "Hamburger",          price: 5.5, menuPrice: 9.5,  menuDescription: KEBAB_MENU_DESC, category: "burger" },
   { id: "burger-chicken",       name: "Chicken Burger",     price: 6,   menuPrice: 10,   menuDescription: KEBAB_MENU_DESC, category: "burger" },
   { id: "burger-cheese",        name: "Cheese Burger",      price: 6,   menuPrice: 10,   menuDescription: KEBAB_MENU_DESC, category: "burger" },
   { id: "burger-chicken-wrap",  name: "Chicken Wrap",       price: 6.5, menuPrice: 10.5, menuDescription: KEBAB_MENU_DESC, category: "burger" },
   { id: "burger-double-cheese", name: "Double Cheeseburger", price: 7,   menuPrice: 11,   menuDescription: KEBAB_MENU_DESC, category: "burger", highlight: true },
 
-  // PIZZE
   { id: "pizza-margherita",     name: "Margherita",         description: "Pomodoro, mozzarella",                                                   price: 6.5, category: "pizze" },
   { id: "pizza-marinara",       name: "Marinara",           description: "Pomodoro",                                                               price: 5.5, category: "pizze" },
   { id: "pizza-royal-kebab",    name: "Royal Kebab",        description: "Kebab, mozzarella, pomodoro, insalata, cipolla, patatine, salse a piacere", price: 11, category: "pizze", highlight: true },
@@ -84,14 +76,12 @@ const MENU_ITEMS = [
   { id: "pizza-4-stagioni",     name: "4 Stagioni",         description: "Pomodoro, mozzarella, prosciutto, funghi, olive, carciofi",               price: 9,   category: "pizze" },
   { id: "pizza-4-formaggi",     name: "4 Formaggi",         description: "Pomodoro, mozzarella, brie, gorgonzola, edam",                            price: 9,   category: "pizze" },
 
-  // FAMILIARI & TAGLIO
   { id: "fam-margherita",       name: "Margherita",    description: "Formato familiare", price: 17, category: "familiari", subGroup: "Pizze Familiari" },
   { id: "fam-farcita",          name: "Farcita",       description: "Formato familiare", price: 21, category: "familiari", subGroup: "Pizze Familiari" },
   { id: "fam-royal-kebab",      name: "Royal Kebab",   description: "Formato familiare", price: 25, category: "familiari", subGroup: "Pizze Familiari", highlight: true },
   { id: "taglio-margherita",    name: "Margherita",    price: 2.5, menuPrice: 3.5, menuDescription: "piatto + bibita", category: "familiari", subGroup: "Pizze al Taglio" },
   { id: "taglio-farcita-kebab", name: "Farcita Kebab", price: 4,   menuPrice: 5,   menuDescription: "piatti + bibita", category: "familiari", subGroup: "Pizze al Taglio" },
 
-  // FRITTI
   { id: "fritti-cheddar",      name: "Cheddar Cheese", price: 5,   category: "fritti" },
   { id: "fritti-cheese-balls", name: "Cheese Balls",   price: 6,   category: "fritti" },
   { id: "fritti-onion-rings",  name: "Onion Rings",    price: 5,   category: "fritti" },
@@ -103,12 +93,10 @@ const MENU_ITEMS = [
   { id: "fritti-patatine-s",   name: "Patatine S",     price: 2.5, category: "fritti" },
   { id: "fritti-patatine-l",   name: "Patatine L",     price: 4.5, category: "fritti" },
 
-  // INSALATE
   { id: "insalate-mixed",   name: "Mixed Salad",    price: 5.9, category: "insalate" },
   { id: "insalate-chicken", name: "Chicken Salad",  price: 7.5, category: "insalate", highlight: true },
   { id: "insalate-tonno",   name: "Salad al Tonno", price: 6.9, category: "insalate" },
 
-  // BIBITE & EXTRA
   { id: "bibite-acqua",        name: "Acqua 50cl",           price: 0.6, category: "bibite", subGroup: "Bibite" },
   { id: "bibite-gassata",      name: "Bibita gassata 33cl",  price: 1,   category: "bibite", subGroup: "Bibite" },
   { id: "bibite-fanta-exotic", name: "Fanta Exotic 33cl",    price: 1.8, category: "bibite", subGroup: "Bibite" },
@@ -156,7 +144,6 @@ const RATING_BREAKDOWN = [
   { stars: 1, percent: 10 },
 ];
 
-/* ============ ICONS (SVG strings) ============ */
 const SVG_SHOPPING_BAG = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`;
 const SVG_SPARKLES = `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>`;
 const SVG_QUOTE = `<svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>`;
@@ -173,7 +160,6 @@ const renderStars = (value, size = 16) => {
   return html;
 };
 
-/* ============ NAVBAR ============ */
 function initNavbar() {
   const header = document.getElementById('site-header');
   const toggle = document.getElementById('nav-toggle');
@@ -209,7 +195,6 @@ function initNavbar() {
   if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
 }
 
-/* ============ MENU ============ */
 const EXPANDED_CATS = new Set();
 const MENU_LIMIT = 6;
 
@@ -311,7 +296,6 @@ function renderMenu(activeId) {
   }
 }
 
-/* ============ HOURS ============ */
 function renderHours() {
   const list = document.getElementById('hours-list');
   const status = document.getElementById('open-status');
@@ -337,16 +321,13 @@ function renderHours() {
   status.querySelector('.label').textContent = open ? 'Aperto Ora' : 'Chiuso';
 }
 
-/* ============ REVIEWS ============ */
 function renderReviews() {
-  // Overall stars
   document.querySelectorAll('[data-stars]').forEach((el) => {
     const value = parseFloat(el.dataset.stars);
     const size = parseInt(el.dataset.size || '16', 10);
     el.innerHTML = renderStars(value, size);
   });
 
-  // Breakdown bars
   const breakdownEl = document.getElementById('score-breakdown');
   breakdownEl.innerHTML = RATING_BREAKDOWN.map((b) => `
     <div class="breakdown-row">
@@ -355,7 +336,6 @@ function renderReviews() {
     </div>
   `).join('');
 
-  // Cards
   const grid = document.getElementById('reviews-grid');
   grid.innerHTML = REVIEWS.map((r) => `
     <article class="review-card">
@@ -369,14 +349,12 @@ function renderReviews() {
   `).join('');
 }
 
-/* ============ REVEAL ON SCROLL ============ */
 function initReveal() {
   const els = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        // Animate breakdown bars once revealed
         entry.target.querySelectorAll('.bar-fill[data-width]').forEach((bar) => {
           bar.style.width = bar.dataset.width + '%';
         });
@@ -388,7 +366,6 @@ function initReveal() {
   els.forEach((el) => io.observe(el));
 }
 
-/* ============ INIT ============ */
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   renderMenu('tacos');
@@ -406,6 +383,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Refresh open-now status every minute
   setInterval(renderHours, 60_000);
 });

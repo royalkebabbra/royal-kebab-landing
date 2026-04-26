@@ -1,5 +1,5 @@
 User-agent: *
-Allow: /royal-kebab-landing/
-Disallow: /royal-kebab-landing/screenRecensioni/
+Allow: /
+Disallow: /screenRecensioni/
 
-Sitemap: https://conconet.github.io/royal-kebab-landing/sitemap.xml
+Sitemap: https://royalkebabbra.it/sitemap.xml
