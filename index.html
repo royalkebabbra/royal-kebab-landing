@@ -56,10 +56,9 @@
       "longitude":7.8495285
     },
     "openingHoursSpecification":[
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"12:00","closes":"15:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday"],"opens":"17:30","closes":"23:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"15:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"17:30","closes":"23:30"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"12:00","closes":"23:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"17:30","closes":"23:30"},
       {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"17:30","closes":"23:30"}
     ],
     "acceptsReservations":false,
@@ -360,8 +359,8 @@
             Orari
           </h4>
           <ul class="hours-brief">
-            <li><span>Mar–Gio</span><span>12:00–15:00 / 17:30–23:00</span></li>
-            <li><span>Ven–Sab</span><span>12:00–15:00 / 17:30–23:30</span></li>
+            <li><span>Mar–Ven</span><span>12:00–23:00</span></li>
+            <li><span>Sabato</span><span>12:00–15:00 / 17:30–23:30</span></li>
             <li><span>Domenica</span><span>17:30–23:30</span></li>
             <li><span>Lunedì</span><span>Chiuso</span></li>
           </ul>
@@ -392,6 +391,6 @@
   </footer>
 
   <script type="text/javascript" src="https://embeds.iubenda.com/widgets/5c648661-ed01-46e9-87bb-099dbd81bed9.js"></script>
-  <script src="script.js?v=4"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
