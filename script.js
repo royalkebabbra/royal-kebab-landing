@@ -114,12 +114,12 @@ const formatPrice = (price) => `€ ${price.toFixed(2).replace(".", ",")}`;
 const hm = (h, m) => h * 60 + m;
 const WEEK_HOURS = [
   { day: "Lunedì", weekday: 1, closed: true, intervals: [], display: "Chiuso" },
-  { day: "Martedì", weekday: 2, closed: false, intervals: [[hm(12, 0), hm(23, 0)]], display: "12:00–23:00" },
-  { day: "Mercoledì", weekday: 3, closed: false, intervals: [[hm(12, 0), hm(23, 0)]], display: "12:00–23:00" },
-  { day: "Giovedì", weekday: 4, closed: false, intervals: [[hm(12, 0), hm(23, 0)]], display: "12:00–23:00" },
-  { day: "Venerdì", weekday: 5, closed: false, intervals: [[hm(12, 0), hm(23, 0)]], display: "12:00–23:00" },
-  { day: "Sabato", weekday: 6, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(17, 30), hm(23, 30)]], display: "12:00–15:00 / 17:30–23:30" },
-  { day: "Domenica", weekday: 0, closed: false, intervals: [[hm(17, 30), hm(23, 30)]], display: "17:30–23:30" },
+  { day: "Martedì", weekday: 2, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
+  { day: "Mercoledì", weekday: 3, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
+  { day: "Giovedì", weekday: 4, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(23, 0)]], display: "12:00–15:00 / 18:00–23:00" },
+  { day: "Venerdì", weekday: 5, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(24, 0)]], display: "12:00–15:00 / 18:00–00:00" },
+  { day: "Sabato", weekday: 6, closed: false, intervals: [[hm(12, 0), hm(15, 0)], [hm(18, 0), hm(24, 0)]], display: "12:00–15:00 / 18:00–00:00" },
+  { day: "Domenica", weekday: 0, closed: false, intervals: [[hm(18, 0), hm(23, 0)]], display: "Chiuso / 18:00–23:00" },
 ];
 
 const isOpenNow = (now) => {
@@ -127,7 +127,7 @@ const isOpenNow = (now) => {
   const minutes = now.getHours() * 60 + now.getMinutes();
   const today = WEEK_HOURS.find((d) => d.weekday === weekday);
   if (!today || today.closed) return false;
-  return today.intervals.some(([o, c]) => minutes >= o && minutes < c);
+  return today.intervals.some(([openAt, closeAt]) => minutes >= openAt && minutes < closeAt);
 };
 
 const REVIEWS = [
